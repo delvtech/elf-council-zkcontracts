@@ -1,0 +1,7 @@
+*.json
+*.js
+*.md
+*.yaml
+lib/
+typechain-types/
+coverage/
