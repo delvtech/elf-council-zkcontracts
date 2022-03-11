@@ -8,15 +8,19 @@
       "outDir": "dist",
       "resolveJsonModule": true,
       "paths": {
+
         "test": ["./test"],
         "test/*": ["./test/*"],
-        "typechain": ["./typechain"],
-        "typechain/*": ["./typechain/*"],
+        "scripts": ["./scripts"],
+        "scripts/*": ["./scripts/*"],
+        "typechain": ["./typechain-types"],
+        "typechain/*": ["./typechain-types/*"],
       },
     },
     "include": [
+      "./scripts",
       "./test",
-      "./typechain"
+      "./typechain-types"
     ],
     "files": ["./hardhat.config.ts"]
   }

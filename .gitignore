@@ -6,3 +6,4 @@ gasReporterOutput.json
 .DS_Store
 coverage.json
 coverage/
+.env
