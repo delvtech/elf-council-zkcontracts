@@ -1,4 +1,5 @@
 import "tsconfig-paths/register";
+import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
@@ -29,6 +30,12 @@ const config: HardhatUserConfig = {
         count: 5,
       },
     },
+    goerli: {
+      url: process.env.ALCHEMY_GOERLI_RPC_HOST,
+    },
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY,
   },
 };
 
