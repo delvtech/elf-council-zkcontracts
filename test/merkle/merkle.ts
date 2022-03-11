@@ -1,10 +1,6 @@
 import { MerkleTree } from "merkletreejs";
 import { BigNumberish, ethers } from "ethers";
-
-export interface Account {
-  address: string;
-  value: BigNumberish;
-}
+import { Account } from "src/common/merkle/Account";
 
 export function getMerkleTree(accounts: Account[]) {
   const leaves = accounts.map((account) => hashAccount(account));
