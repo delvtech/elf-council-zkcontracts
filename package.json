@@ -67,6 +67,7 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@nomiclabs/hardhat-etherscan": "^3.0.3"
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "dotenv": "^16.0.0"
   }
 }
