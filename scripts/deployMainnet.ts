@@ -5,7 +5,7 @@ import { deployContracts } from "scripts/deployContracts";
 
 const {
   ALCHEMY_MAINNET_API_KEY,
-  DEPLOYER_PRIVATE_KEY,
+  MAINNET_DEPLOYER_PRIVATE_KEY,
   ELEMENT_TOKEN_ADDRESS,
   LOCKING_VAULT_ADDRESS,
   MERKLE_ROOT,
@@ -22,7 +22,7 @@ async function main() {
     return;
   }
 
-  if (!DEPLOYER_PRIVATE_KEY) {
+  if (!MAINNET_DEPLOYER_PRIVATE_KEY) {
     console.log("No deployer private key provided");
     return;
   }
@@ -43,7 +43,7 @@ async function main() {
   }
 
   const provider = new providers.JsonRpcProvider(ALCHEMY_MAINNET_RPC_HOST);
-  const deployer = new Wallet(DEPLOYER_PRIVATE_KEY, provider);
+  const deployer = new Wallet(MAINNET_DEPLOYER_PRIVATE_KEY, provider);
 
   const { verifierContract, airdropContract } = await deployContracts(
     deployer,

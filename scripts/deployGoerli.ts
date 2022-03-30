@@ -2,23 +2,19 @@ import "tsconfig-paths/register";
 
 import { providers, Wallet } from "ethers";
 import { deployContracts } from "scripts/deployContracts";
-import { getMockMerkleTree } from "test/merkle/getMockMerkleTree";
 
 const {
-  ALCHEMY_GOERLI_RPC_HOST,
-  DEPLOYER_PRIVATE_KEY,
+  ALCHEMY_GOERLI_API_KEY,
+  GOERLI_DEPLOYER_PRIVATE_KEY,
   ELEMENT_TOKEN_ADDRESS,
   LOCKING_VAULT_ADDRESS,
-  // MERKLE_ROOT,
+  MERKLE_ROOT,
 } = process.env;
+
+const ALCHEMY_GOERLI_RPC_HOST = `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_GOERLI_API_KEY}`;
 
 const tokenAddress = ELEMENT_TOKEN_ADDRESS;
 const vaultAddress = LOCKING_VAULT_ADDRESS;
-const merkleTree = getMockMerkleTree();
-const { val: merkleRoot } = merkleTree.root;
-console.log("merkleRoot", merkleRoot);
-
-//commitment = pedersenHashConcat(key, secret);
 
 async function main() {
   if (!ALCHEMY_GOERLI_RPC_HOST) {
@@ -26,7 +22,7 @@ async function main() {
     return;
   }
 
-  if (!DEPLOYER_PRIVATE_KEY) {
+  if (!GOERLI_DEPLOYER_PRIVATE_KEY) {
     console.log("No deployer private key provided");
     return;
   }
@@ -41,14 +37,19 @@ async function main() {
     return;
   }
 
+  if (!MERKLE_ROOT) {
+    console.log("No merkle root provided");
+    return;
+  }
+
   const provider = new providers.JsonRpcProvider(ALCHEMY_GOERLI_RPC_HOST);
-  const deployer = new Wallet(DEPLOYER_PRIVATE_KEY, provider);
+  const deployer = new Wallet(GOERLI_DEPLOYER_PRIVATE_KEY, provider);
 
   const { verifierContract, airdropContract } = await deployContracts(
     deployer,
     tokenAddress,
     vaultAddress,
-    merkleRoot.toString()
+    MERKLE_ROOT
   );
 
   console.log("verifierContract deployed at", verifierContract.address);
