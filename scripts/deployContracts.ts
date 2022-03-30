@@ -4,7 +4,7 @@ import {
   PlonkVerifier__factory,
   PrivateAirdrop,
   PrivateAirdrop__factory,
-} from "typechain";
+} from "typechain-types";
 
 const NUM_TOKEN_PER_REDEMPTION = ethers.constants.WeiPerEther;
 

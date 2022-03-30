@@ -32,7 +32,10 @@ const config: HardhatUserConfig = {
       },
     },
     goerli: {
-      url: process.env.ALCHEMY_GOERLI_RPC_HOST,
+      url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_GOERLI_API_KEY}`,
+    },
+    mainnet: {
+      url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_MAINNET_API_KEY}`,
     },
   },
   etherscan: {
