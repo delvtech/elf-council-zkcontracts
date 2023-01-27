@@ -3,7 +3,7 @@ import {
   LockingVault__factory,
   MockERC20,
   MockERC20__factory,
-} from "elf-council-typechain";
+} from "@elementfi/elf-council-typechain";
 import { ethers } from "ethers";
 import { parseEther } from "ethers/lib/utils";
 import { readFileSync } from "fs";
