@@ -12,7 +12,7 @@
     "test": "npx hardhat test ./test/tests/*.ts --no-compile",
     "test-quick": "TS_NODE_TRANSPILE_ONLY=1 npx hardhat test ./test/tests/*.ts --no-compile",
     "coverage": "COVERAGE=true npx hardhat coverage --solcoverjs \".solcover.js\" --testfiles \"./test/*.ts\"",
-    "update-elf-council-typechain": "npm install git+https://github.com/element-fi/elf-council-typechain.git"
+    "update-elf-council-typechain": "npm install git+https://github.com/delv-tech/elf-council-typechain.git"
   },
   "husky": {
     "hooks": {
@@ -68,7 +68,7 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@elementfi/elf-council-typechain": "git+https://github.com/element-fi/elf-council-typechain.git",
+    "@elementfi/elf-council-typechain": "git+https://github.com/delv-tech/elf-council-typechain.git",
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "dotenv": "^16.0.0",
   }
