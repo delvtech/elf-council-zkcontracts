@@ -1,7 +1,7 @@
 # Elf Council NFTs
 
-[![Build Status](https://github.com/delv-tech/nft-contracts/workflows/Tests/badge.svg)](https://github.com/delv-tech/nft-contracts/actions)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/delv-tech/nft-contracts/blob/master/LICENSE)
+[![Build Status](https://github.com/delvtech/nft-contracts/workflows/Tests/badge.svg)](https://github.com/delvtech/nft-contracts/actions)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/delvtech/nft-contracts/blob/master/LICENSE)
 
 Elf Council NFTs is a free NFT project that supports Element's governance protocol.
 
@@ -15,7 +15,7 @@ Elf Council NFTs is a community-driven project and there are many ways to contri
 
 If you have a suggestion for a new feature, extension, or cool use case and want to help the community, drop by the #developers channel in our [discord](https://discord.gg/srgcTGccGe) to discuss and you will have a warm welcome!
 
-When contributing, please be sure to follow our contribution [guidelines](https://github.com/delv-tech/nft-contracts/blob/master/CONTRIBUTING.md) when proposing any new code. Lastly, because Council is a community-driven governance protocol, any new code contributions are more likely to be accepted into future deployments of the protocol if they have been openly discussed within the community first.
+When contributing, please be sure to follow our contribution [guidelines](https://github.com/delvtech/nft-contracts/blob/master/CONTRIBUTING.md) when proposing any new code. Lastly, because Council is a community-driven governance protocol, any new code contributions are more likely to be accepted into future deployments of the protocol if they have been openly discussed within the community first.
 
 ## Build and Testing
 
@@ -26,7 +26,7 @@ When contributing, please be sure to follow our contribution [guidelines](https:
 ### 2. Setup
 
 ```
-git clone git@github.com:delv-tech/nft-contracts.git
+git clone git@github.com:delvtech/nft-contracts.git
 ```
 
 ```
