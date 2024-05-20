@@ -5,10 +5,6 @@
 
 Elf Council NFTs is a free NFT project that supports Element's governance protocol.
 
-## Bug Reporting
-
-For both non-security-critical bugs and security-related critical bugs please follow the rules and instructions highlighted in the Element Finance Bug Bounty program on the [Immunefi platform](https://immunefi.com/bounty/elementfinance/).
-
 ## Contributing to Elf Council NFTs
 
 Elf Council NFTs is a community-driven project and there are many ways to contribute to it. We encourage you to jump in and improve and use this code whether that be contributing to Council directly, forking the governance framework for your own use, or just taking bits and pieces from it. We want everyone to build with us!
